@@ -1,0 +1,11 @@
+[retriever]
+type = SimplePOP3SSLRetriever
+server = pop.gmail.com
+username = email
+password = password
+[destination]
+type = Mboxrd
+path = ~/path/to/gmail-backup.mbox
+[options]
+verbose = 2
+message_log = ~/path/to/gmail.log 
