@@ -1,22 +1,10 @@
 var q = require('q'),
     fs = require('fs');
 
+var DR = eval(fs.readFileSync('./data_reader.js')+'');
 
 var WhatsApp = {
-    read: function(filepath) {
-        var deferred = q.defer();
-
-        fs.readFile(filepath, 'utf8', function (err, data) {
-            if (err) {
-                console.log(err);
-                deferred.reject(new Error(err));
-            } else {
-                deferred.resolve(data);
-            }
-        });
-
-        return deferred.promise;
-    },
+    read: DR.read,
 
     //sample text:
     //8/5/13, 9:26:11 PM: Vivek: <text here>
