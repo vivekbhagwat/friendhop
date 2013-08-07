@@ -18,3 +18,4 @@ DataReader = {
     }
 };
 
+exports.read = DataReader.read;

@@ -1,7 +1,7 @@
 var q = require('q'),
     fs = require('fs');
 
-var DR = eval(fs.readFileSync('./data_reader.js')+'');
+var DR = require('./data_reader.js');
 
 var WhatsApp = {
     read: DR.read,
